@@ -1,0 +1,5 @@
+fastapi
+unicorn[standard]
+pydantic
+starlette
+typing-extensions
