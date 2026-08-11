@@ -38,4 +38,4 @@ jobs:
 
       - name: Push Docker image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/fastapi-cicd:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/fastapi-cicd:latest   
