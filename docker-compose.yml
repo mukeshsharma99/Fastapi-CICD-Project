@@ -1,0 +1,26 @@
+services:
+
+  fastapi:
+    build: .
+    container_name: fastapi-container
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://fastapi:fastapi_password@postgres:5432/fastapi_db
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    container_name: fastapi-postgres
+    environment:
+      POSTGRES_USER: fastapi
+      POSTGRES_PASSWORD: fastapi_password
+      POSTGRES_DB: fastapi_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
