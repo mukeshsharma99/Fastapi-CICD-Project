@@ -1,4 +1,4 @@
-# 🚀 FastAPI CI/CD Project
+# 🚀 FastAPI Cloud-Native DevSecOps Platform
 
 A backend application built with **FastAPI, PostgreSQL, Docker, Pytest, Git, GitHub, and GitHub Actions**.
 
